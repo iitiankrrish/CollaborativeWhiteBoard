@@ -34,10 +34,10 @@ connectToDB(process.env.DBURL)
   .then(() => console.log('Database connected'))
   .catch((err) => console.error('Database connection error:', err));
 
-app.use('/whiteboards', WhiteBoardRoute);
-app.use('/users', UserRoute);
-app.use('/chat', ChatRoute);
-app.use('/api/history', HistoryRoute);
+// app.use('/whiteboards', WhiteBoardRoute);
+// app.use('/users', UserRoute);
+// app.use('/chat', ChatRoute);
+// app.use('/api/history', HistoryRoute);
 const io = new Server(httpServer, {
   cors: {
     origin: process.env.CLIENT,
