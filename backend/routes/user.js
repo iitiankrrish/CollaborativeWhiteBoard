@@ -18,5 +18,5 @@ router.get('/getuser', UserLoggedInOrNot, getUserById);
 router.post('/getowner', UserLoggedInOrNot, getOwnerById);
 router.get('/my/whiteboards', UserLoggedInOrNot, getMyWhiteBoards);
 router.get('/collab/whiteboards', UserLoggedInOrNot, getCollaboratingWhiteboardIds);
-router.post('/session/:whiteboardId/join', UserLoggedInOrNot, joinSession);
+// router.post('/session/:whiteboardId/join', UserLoggedInOrNot, joinSession);
 module.exports = router;
