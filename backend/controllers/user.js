@@ -38,7 +38,14 @@ async function handleLogIn(req, res) {
     }
 
     const token = setUser(currentUser);
-    res.cookie("loginToken", token, { maxAge: 86400000, httpOnly: true });
+    const cookieOptions = {
+      httpOnly: true,    
+      secure: true,       
+      sameSite: 'None',   
+      path: '/',         
+      maxAge: 86400000,  
+    };
+    res.cookie("loginToken", token, cookieOptions);
 
     return res.json({ success: "Logged in successfully" , currentUser });
   } catch (error) {
@@ -48,8 +55,19 @@ async function handleLogIn(req, res) {
 }
 
 async function handleLogOut(req, res) {
-  res.clearCookie("loginToken");
-  return res.status(200).json({ success: "Logged out successfully" });
+ try {
+    const cookieOptions = {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'None',
+      path: '/',
+    };
+    res.clearCookie("loginToken", cookieOptions);
+    return res.status(200).json({ success: "Logged out successfully" });
+  } catch (error) {
+    console.error("Error in logout:", error);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
 }
 
 async function getUserById(req, res) {
