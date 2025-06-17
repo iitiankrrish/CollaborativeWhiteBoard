@@ -11,18 +11,18 @@ A powerful, real-time collaborative whiteboard app that makes it easier to work 
 
 ## Table of Contents
 
-1.  [Live Demo](#live-demo)
-2.  [Key Features](#key-features)
-3.  [System Architecture & Tech Stack](#system-architecture--tech-stack)
-4.  [Local Setup & Installation](#local-setup--installation)
-5.  [Deployment Guide](#deployment-guide)
-6.  [Demonstration Video](#demo-video)
+1.  Live Demo
+2.  Key Features
+3.  System Architecture & Tech Stack
+4.  Local Setup & Installation
+5.  Deployment Guide
+6.  Demonstration Video
 
 
 ## Live Demo
 -   **Live Frontend (Vercel):** [collaborative-white-board-kappa.vercel.app](https://collaborative-white-board-kappa.vercel.app/)
-
-> **Note:** The free-tier backend on Render may "spin down" after 15 minutes of inactivity. The first API request (like logging in or signing up) might take 30-60 seconds to complete while the server wakes up. Please be patient!
+---
+- The free-tier backend on Render may "spin down" after 15 minutes of inactivity. The first API request (like logging in or signing up) might take 30-60 seconds to complete while the server wakes up. Please be patient!
 
 ---
 
@@ -53,18 +53,15 @@ A powerful, real-time collaborative whiteboard app that makes it easier to work 
 
 This project follows an architecture where the React frontend communicates with the Express.js backend via a REST API for standard HTTP requests and a WebSocket connection for real-time events.
 
-<p align="center">
-  <b>[ Frontend (Vercel) ]</b> <i>--- REST API / WebSockets ---></i> <b>[ Backend (Render) ]</b> <i>--- Mongoose ---></i> <b>[ MongoDB Atlas ]</b>
-</p>
 
-| Category                | Technology / Library                                           | Purpose                                                    |
-| ----------------------- | -------------------------------------------------------------- | ---------------------------------------------------------- |
-| **Frontend**            | React 18, Vite, React Router, Material-UI (MUI), Axios         | Building a fast, interactive UI and handling client-side logic. |
-| **Backend**             | Node.js, Express.js, Mongoose, CORS, Cookie Parser     | Creating the REST API, managing server logic, and security.  |
-| **Database**            | MongoDB Atlas                           | Storing user data, whiteboard sessions, and drawing history. |
-| **Real-time Engine**    | Socket.IO                                                      | Enabling bi-directional, real-time communication.          |
-| **Authentication**      | JSON Web Tokens (JWT), Bcrypt (Password Hashing)               | Securing user accounts and authenticating requests.        |
-| **Deployment**          | Vercel (Frontend CI/CD) & Render (Backend CI/CD)               | Automating builds and hosting the live application.        |
+| Category                | Technology / Library                                                                                               
+| ----------------------- | ---------------------------------------------------------
+| **Frontend**            | React 18, Vite, Material-UI (MUI)        
+| **Backend**             | Node.js, Express.js    
+| **Database**            | MongoDB Atlas                           
+| **Live Collaboration**    | Socket.IO                                                      
+| **Authentication**      | JSON Web Tokens, Bcrypt (Password Hashing)               
+| **Deployment**          | Vercel & Render               
 
 ---
 
@@ -73,13 +70,13 @@ This project follows an architecture where the React frontend communicates with 
 Follow these instructions to get the project up and running on your local machine.
 
 ### Prerequisites
--   **Node.js:** v18 or later is recommended.
+-   **Node.js:** v18 or later
 -   **npm:** Should be included with Node.js.
 -   **Git:** To clone the repository.
--   **MongoDB Atlas:** A free account is needed to get a database connection string.
+-   **MongoDB Atlas:** Needed to get a database connection string (The url can be changed to connect it to the the MongoDB Compass and CORS code may be altered to run locally and avoid connecting to the Atlas )
 
 ### 1. Clone the Repository
-First, clone the project from GitHub to your local machine.
+Clone the project from GitHub to your local machine.
 
 ```bash
 git clone https://github.com/iitiankrrish/CollaborativeWhiteBoard.git
@@ -160,11 +157,11 @@ npm install
 npm run dev
 ```
 
-Your default browser should open to http://localhost:5173, where you can see and interact with the application.
+Your default browser should open to [the local host](http://localhost:5173), where you can see and interact with the application.
 
 Now , you can make your own changes or improve the codebase of this Collaborative Whiteboard 
 
 ## Demo Video 
 
-Below is a video demonstration of the Collaborative Whiteboard 
+Below is a video demonstration of the Collaborative Whiteboard: [Demo and Guide to the Collaborative Whiteboard](https://youtu.be/sioSxn5Iug4?feature=shared)
 
