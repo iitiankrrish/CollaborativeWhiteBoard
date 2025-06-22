@@ -49,7 +49,7 @@ A powerful, real-time collaborative whiteboard app that makes it easier to work 
 
 ---
 
-## System Architecture & Tech Stack
+## Tech Stack
 
 This project follows an architecture where the React frontend communicates with the Express.js backend via a REST API for standard HTTP requests and a WebSocket connection for real-time events.
 
@@ -163,5 +163,5 @@ Now , you can make your own changes or improve the codebase of this Collaborativ
 
 ## Demo Video 
 
-Below is a video demonstration of the Collaborative Whiteboard: [Demo and Guide to the Collaborative Whiteboard](https://youtu.be/sioSxn5Iug4?feature=shared)
+Here is a video demonstration of the Collaborative Whiteboard: [Demo and Guide to the Collaborative Whiteboard](https://youtu.be/sioSxn5Iug4?feature=shared)
 
